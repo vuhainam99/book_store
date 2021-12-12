@@ -1,0 +1,42 @@
+.content__paging {
+    margin-left: 84%;
+}
+
+.content__paging ul {
+    display: inline-block;
+    background: rgb(172, 170, 169);
+}
+.content__paging ul li {
+    color: white;
+    
+}
+.content__paging ul li:hover {
+    color: rgb(247, 0, 0);
+    transition: .5s;
+    background: violet;
+    
+}
+#product--list {
+    display: flex;
+    justify-content: flex-start;
+}
+#product--list > * {
+    margin: 10px;
+}
+@media all and (min-width: 300px) and (max-width: 400px) {
+    .content__paging {
+        margin-left: 0%;
+    }
+    #product--list > * {
+        margin: 20px auto;
+    }
+    #ct {
+        text-align: center;
+    }
+  
+  }
+.product__content a {
+    position: absolute;
+    top: 50%;
+    right: 4%;
+}

@@ -1,0 +1,482 @@
+<!-- {% load static %} -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title> Book Recommndation</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<!-- Google font -->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
+
+	<!-- Bootstrap -->
+
+	<link type="text/css" rel="stylesheet" href="../../static/shop/css/bootstrap.min.css" />
+
+	<!-- Slick -->
+
+	<link type="text/css" rel="stylesheet" href="../../static/shop/css/slick.css" />
+	<link type="text/css" rel="stylesheet" href="../../static/shop/css/slick-theme.css" />
+
+	<!-- nouislider -->
+
+	<link type="text/css" rel="stylesheet" href="../../static/shop/css/nouislider.min.css" />
+
+	<!-- Font Awesome Icon -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+	<link rel="stylesheet" href="../../static/shop/css/font-awesome.min.css">
+
+	<!-- Custom stlylesheet -->
+
+	<link type="text/css" rel="stylesheet" href="../../static/shop/css/style.css" />
+
+
+	<!-- style-detail -->
+	<link type="text/css" rel="stylesheet" href="../../static/shop/css/style-detail.css" />
+
+	<link type="text/css" rel="stylesheet" href="../../static/shop/css/style-cart.css" />
+
+	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" />
+
+</head>
+
+<body>
+	<!-- HEADER -->
+	<header>
+		<script></script>
+
+		<!-- TOP HEADER -->
+		<div id="top-header">
+			<div class="container">
+				<ul class="header-links pull-left">
+					<li><a href="#"><i class="fa fa-phone"></i>0988888888</a></li>
+					<li><a href="#"><i class="fa fa-envelope-o"></i> dangphong1520@gmail.com</a></li>
+					<li><a href="#"><i class="fa fa-map-marker"></i> 175 Tay Son</a></li>
+				</ul>
+				<ul class="header-links pull-right" id="menu--bar">
+					<li id="trang__chu" class="active"><a href="#">Trang chủ</a></li>
+					<li>
+						<font color="red" ;>Xin chào, <span id="get--username"></span></font>
+					</li>
+					<li><a id="logout" href="#">Đăng xuất</a></li>
+
+				</ul>
+			</div>
+		</div>
+
+		<div id="header">
+			<!-- container -->
+			<div class="container">
+				<!-- row -->
+				<div class="row">
+					<!-- LOGO -->
+					<div class="col-md-3" id="logo--content">
+						<div class="header-logo">
+							<a id="go--home" href="index-base.html" class="logo">
+								<img style="border-radius: 50%; margin-top: 15%" src="../../static/shop/img/logob.png"
+									alt="error">
+
+							</a>
+
+						</div>
+						<br />
+						<span>
+							<h3 style="color: #FFFFFF">YourReads</h3>
+						</span>
+					</div>
+
+
+					<!-- /LOGO -->
+
+					<!-- SEARCH BAR -->
+					<div class="col-md-6">
+						<div class="header-search">
+							<form id="form__search">
+								<!-- {% csrf_token %} -->
+								<div name="stype" class="input-select"  id="input-select">
+									Book Title
+								</div>
+								<input type="text" id="search--book" class="input" placeholder="Search here"
+									name="searchbox">
+									<button id="myBtn"  style="border: none; background-color: rgba(0, 0, 0, 0); margin: 0; padding: 0;">
+										<a name="sbutton" style="width: 100%;
+										height: 100%;
+										display: inline-block;
+										padding: 0px 13px;" href="#" class="search-btn">Tìm kiếm</a>
+									</button>
+							</form>
+						</div>
+					</div>
+					<!-- /SEARCH BAR -->
+
+					<!-- ACCOUNT -->
+					<div class="col-md-3 clearfix">
+						<div class="header-ctn">
+							<!-- Wishlist -->
+
+							<!-- /Wishlist -->
+
+							<!-- /Menu Toogle -->
+						</div>
+					</div>
+					<!-- /ACCOUNT -->
+				</div>
+				<!-- row -->
+			</div>
+			<!-- container -->
+		</div>
+		<!-- /MAIN HEADER -->
+	</header>
+	<!-- /HEADER -->
+
+	<!-- NAVIGATION -->
+	<!-- /NAVIGATION -->
+
+	<!-- SECTION -->
+	</div>
+	<!-- /SECTION -->
+
+	<div class="section" id="style--cart">
+		<!-- container -->
+		<div class="container">
+			<!-- row -->
+			<div class="row">
+
+				<!-- section title -->
+				<div class="col-md-12">
+					<div class="section-title">
+						<h3 class="title">Sản phẩm</h3>
+
+					</div>
+				</div>
+				<!-- /section title -->
+
+				<!-- Products tab & slick -->
+				<div class="col-md-12" id="product--cart">
+					<div class="cart__title">
+						<div class="cart__name">Sản phẩm</div>
+						<div class="cart__price">Giá</div>
+						<div class="cart__quantity">Số lượng </div>
+						<div class="cart__remove">xóa</div>
+					</div>
+					<div id="cart__list-item" class="cart__list">
+						<div class="cart__list-product">
+							<div class="cart__list-img">
+								<img src="../../static/shop/img/book-test.png" alt="">
+							</div>
+							<div class="cart__list-name">asdfsd</div>
+							<div class="cart__list-price">gia</div>
+							<div class="cart__list-quantity">
+								<div>
+									<!-- <span id="reduce"><i class="fas fa-minus"></i></span> -->
+									<input value=1 id="current__quantity" type="text">
+									<!-- <span id="increase"><i class="fas fa-plus"></i></span> -->
+								</div>
+							</div>
+							<div class="cart__list-remove">xoa</div>
+						</div>
+					</div>
+					<div class="fee">
+						
+						
+						<div id="info">
+							<table id="customers">
+								<tr>
+									<td colspan="2">
+										<h4>Thông tin nhận hàng</h4>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<label for="nameuser">
+											Tên Khách Hàng
+										</label>
+									</td>
+									<td><input type="text" name="nameuser" id="nameuser"></td>
+								</tr>
+								<tr>
+									<td>
+										<label for="address">
+											Nhập địa chỉ
+										</label>
+									</td>
+									<td><input type="text" name="address" id="address"></td>
+								</tr>
+								<tr>
+									<td>
+										<label for="city">
+											Tỉnh/Thành Phố
+										</label>
+									</td>
+									<td><input type="text" name="city" id="city"></td>
+								</tr>
+								<tr>
+									<td colspan="2">
+										<label for="ice-cream">Chọn thương phức thanh toán:
+											<select class="ice-cream" name="ice-cream">
+												<option value="1">Internet banking</option>
+												<option value="2">Thanh toán khi nhận hàng</option>
+											</select>
+										</label>
+									</td>
+								</tr>
+							</table>
+						</div>
+					
+						<button id="thanh__toan">Thanh toán</button>
+					</div>
+
+				</div>
+			</div>
+			<!-- /row -->
+		</div>
+		<!-- /container -->
+	</div>
+	<!-- SECTION -->
+
+	<!-- SECTION -->
+	<!-- /SECTION -->
+	<script>
+		function myfun() {
+			$(document).ready(function () {
+				$("#heart").click(function () {
+					if ($("#heart").hasClass("liked")) {
+						$("#heart").html('<i class="fa fa-heart-o" aria-hidden="true"></i>');
+						$("#heart").removeClass("liked");
+					} else {
+						$("#heart").html('<i class="fa fa-heart" aria-hidden="true"></i>');
+						$("#heart").addClass("liked");
+					}
+				});
+			});
+		}
+	</script>
+
+	<!-- {% endblock %} -->
+	<footer id="footer">
+		<!-- top footer -->
+		<div class="section">
+			<!-- container -->
+			<div class="container">
+				<!-- row -->
+				<div class="row">
+
+					<div class="footer">
+						<h3 class="footer-title">Liên hệ với chúng tôi</h3>
+						<p>Trang web này dành cho Đề xuất sách. Trên cơ sở lịch sử của người dùng, nó đề xuất cuốn sách.
+							Người dùng cũng có thể tìm kiếm và xếp hạng cuốn sách. Chúng tôi thực hiện trang web này như
+							một dự án học kỳ đại học của chúng tôi. Nó sẽ được nâng cấp trong tương lai. </p>
+						<ul class="footer-links">
+							<li><a href="#"><i class="fa fa-map-marker"></i>175 Tay Son</a></li>
+							<li><a href="#"><i class="fa fa-phone"></i>0988888888</a></li>
+							<li><a href="#"><i class="fa fa-envelope-o"></i>dangphong1520@gmail.com</a></li>
+						</ul>
+					</div>
+				</div>
+				<!-- /container -->
+			</div>
+			<!-- /top footer -->
+
+			<!-- bottom footer -->
+			<div id="bottom-footer" class="section">
+				<div class="container">
+					<!-- row -->
+					<div class="row">
+						<div class="col-md-12 bottom__item text-center">
+
+							<span class="copyright">
+								<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+								Copyright &copy;
+								<script>document.write(new Date().getFullYear());</script> All rights reserved |
+
+								<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+							</span>
+						</div>
+					</div>
+					<!-- /row -->
+				</div>
+				<!-- /container -->
+			</div>
+			<!-- /bottom footer -->
+	</footer>
+	<!-- /FOOTER -->
+
+	<!-- jQuery Plugins -->
+	<script src="../../static/shop/js/jquery.min.js"></script>
+	<script src="../../static/shop/js/bootstrap.min.js"></script>
+	<script src="../../static/shop/js/slick.min.js"></script>
+	<script src="../../static/shop/js/nouislider.min.js"></script>
+	<script src="../../static/shop/js/jquery.zoom.min.js"></script>
+	<script src="../../static/shop/js/main.js"></script>
+	<script src="../../static/shop/js/cf.js"></script>
+	<script>
+		// var lc = "http://192.168.1.83:8000";
+		var lc ="..";
+
+
+		const queryString = window.location.search;
+		console.log(queryString);
+		var urlParams = new URLSearchParams(queryString);
+		var username = urlParams.get('username');
+		var userid = urlParams.get('userid');
+		var id_book = urlParams.get('id_book');
+		console.log(userid);
+		document.getElementById("get--username").innerHTML = username;
+
+		//get 
+		// get cart item
+		function getAddData() {
+			return new Promise((resolve, reject) => {
+				fetch(`${lc}/api/v1/add_cart/?id_user=${userid}&book_id=${id_book}`)
+					.then(response => {
+						return response.json();
+					})
+					.then(data => {
+
+						resolve(data);
+					})
+					.catch(err => {
+						reject(err);
+					});
+			});
+		}
+		getAddData().then(data => {
+			// console.log(data);
+
+			g();
+
+		}).catch(err => {
+			console.log(err);
+		});
+
+		// get cart item
+		function getData() {
+			return new Promise((resolve, reject) => {
+				fetch(`${lc}/api/v1/order/?id_user=${userid}`)
+					.then(response => {
+						return response.json();
+					})
+					.then(data => {
+
+						resolve(data);
+					})
+					.catch(err => {
+						reject(err);
+					});
+			});
+		}
+		function g() {
+			getData().then(data => {
+				// console.log(data);
+
+				const queryString = window.location.search;
+				console.log(queryString);
+				const urlParams = new URLSearchParams(queryString);
+				const username = urlParams.get('username');
+				const userid = urlParams.get('userid');
+				console.log(username);
+				document.getElementById("get--username").innerHTML = username;
+
+				var categories = data.data;
+				// console.log(categories.book);
+
+				var htmls = categories.map(function (category, index) {
+					console.log(category);
+
+					return `
+						<div class="cart__list-product">
+                        <div class="cart__list-img">
+                            <img src="${category.book.image_url}" alt="">
+                        </div>
+                        <div class="cart__list-name">${category.book.book_title.substring(1, 10)}</div>
+                        <div class="cart__list-price">${category.book.book_price}</div>
+                        <div class="cart__list-quantity">
+                            <div>
+                                <input value=1 id="current__quantity" type="text">
+                            </div>
+                        </div>
+                        <div class="cart__list-remove">xóa</div>
+						</div>
+					`
+				});
+
+				var html = htmls.join('');
+				document.getElementById('cart__list-item').innerHTML = html;
+
+			}).catch(err => {
+				console.log(err);
+			});
+		}
+		g()
+		//search book
+		document.getElementById("myBtn").addEventListener("click", function (e) {
+			e.preventDefault();
+			var a = document.getElementById("search--book").value;
+			window.location.href = `./search-base.html?search=${a}&userid=${userid}&username=${username}`;
+		});
+
+		// go home
+		document.getElementById('go--home').addEventListener('click', function (e) {
+			e.preventDefault();
+			window.location.href = `./index-base.html?userid=${userid}&username=${username}`;
+		})
+		document.getElementById('trang__chu').addEventListener('click', function (e) {
+			e.preventDefault();
+			window.location.href = `./index-base.html?userid=${userid}&username=${username}`;
+		})
+
+		// logout
+		var logout = document.getElementById('logout');
+		logout.addEventListener('click', function () {
+			if (confirm('Bạn có chắc chắn muốn thoát ?')) {
+
+				window.localStorage.clear();
+				window.location.reload(true);
+				window.location.replace('./login-base.html');
+			}
+		})
+
+		var fee = document.getElementById('thanh__toan');
+		fee.addEventListener('click', function (e) {
+			nm = document.getElementById('nameuser').value;
+            ads = document.getElementById('address').value;
+            cti = document.getElementById('city').value;
+            if(nm == "" || ads == ""|| cti == ""){
+                alert('Vui lòng điền đẩy đủ thông tin');
+            }else{ 
+				var settings = {
+					url: `${lc}/api/v1/order/?id_user=${userid}`,
+					method: "DELETE",
+					timeout: 0,
+					contentType: "application/json",
+					dataType: "json",
+				};
+
+				$.ajax(settings).done(function (response) {
+					console.log(response);
+					var status = response.status;
+					confirm('Bạn có chắc muốn thanh toán?');
+					if (status == '201') {
+						alert('Thanh toán thành công, quay lại trang chủ ! ');
+
+						window.location.href = `./index-base.html?userid=${userid}&username=${username}`;
+
+					} else {
+						alert("Error !");
+					}
+
+				});
+			}
+		})
+
+
+	</script>
+</body>
+
+</html>

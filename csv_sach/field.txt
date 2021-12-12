@@ -1,0 +1,68 @@
+book_id:1
+goodreads_book_id:2767052
+best_book_id:2767052
+work_id:2792775
+books_count:272
+isbn:439023483
+isbn13:9.78043902348e+12
+authors:Suzanne Collins
+original_publication_year:2008.0
+original_title:The Hunger Games
+title:"The Hunger Games (The Hunger Games, #1)"
+language_code:eng
+average_rating:4.34
+ratings_count:4780653
+work_ratings_count:4942365
+work_text_reviews_count:155254
+ratings_1:66715
+ratings_2:127936
+ratings_3:560092
+ratings_4:1481305
+ratings_5:2706317
+image_url:https://images.gr-assets.com/books/1447303603m/2767052.jpg
+small_image_url:https://images.gr-assets.com/books/1447303603s/2767052.jpg
+
+
+
+
+book_id,
+book_authors,
+book_desc,
+book_edition,
+book_format,
+book_isbn,
+book_ pages,
+book_rating,
+book_rating_count,
+book_review_count,
+book_title,
+genres,
+image_url,
+book_ price
+
+
+book_id=,book_authors=,book_desc=,book_edition=,book_format=,book_isbn=,book_ pages=,book_rating=,book_rating_count=,book_review_count=,book_title=,genres=,image_url=,book_ price=
+
+userId
+first_name
+last_name
+phone
+email
+password
+ratingCount
+
+
+
+J.K. Rowling|Mary GrandPré,
+"There is a door at the end of a silent corridor. And it’s haunting Harry Pottter’s dreams. Why else would he be waking in the middle of the night, screaming in terror?Harry has a lot on his mind for this, his fifth year at Hogwarts: a Defense Against the Dark Arts teacher with a personality like poisoned honey; a big surprise on the Gryffindor Quidditch team; and the looming terror of the Ordinary Wizarding Level exams. But all these things pale next to the growing threat of He-Who-Must-Not-Be-Named---a threat that neither the magical government nor the authorities at Hogwarts can stop.As the grasp of darkness tightens, Harry must discover the true depth and strength of his friends, the importance of boundless loyalty, and the shocking price of unbearable sacrifice.His fate depends on them alll.(back cover)",
+US Edition,
+Paperback,
+9.78E+12,
+870,
+4.48,
+2041594,
+33264,
+Harry Potter and the Order of the Phoenix,
+Fantasy|Young Adult|Fiction,
+https://images.gr-assets.com/books/1255614970l/2.jpg,
+870

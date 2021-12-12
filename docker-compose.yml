@@ -1,0 +1,35 @@
+version: "3.8"
+
+services:
+  book_store-server:
+    build: .
+    command: python manage.py runserver 0.0.0.0:8000
+    container_name: book_store-django-server
+    volumes:
+      - .:/usr/src/app/
+    ports:
+      - 28273:8000
+    env_file:
+      - ./.env.dev
+    depends_on:
+      - book_store-django-db
+    networks:
+      - book_store
+
+  book_store-django-db:
+    image: postgres:12.3-alpine
+    container_name: book_store-django-db
+    volumes:
+      - postgres-data-dev:/var/lib/postgresql/data/
+    ports:
+      - 54321:5432
+    env_file:
+      - ./.env.dev.db
+    networks:
+      - book_store
+
+volumes:
+  postgres-data-dev:
+
+networks:
+  book_store:

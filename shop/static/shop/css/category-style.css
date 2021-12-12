@@ -1,0 +1,25 @@
+.content__paging {
+    margin-left: 84%;
+}
+
+.content__paging ul {
+    display: inline-block;
+    background: rgb(172, 170, 169);
+}
+.content__paging ul li {
+    color: white;
+    
+}
+.content__paging ul li:hover {
+    color: rgb(247, 0, 0);
+    transition: .5s;
+    background: violet;
+    
+}
+#product--list {
+    display: flex;
+    justify-content: flex-start;
+}
+#product--list > * {
+    margin: 10px;
+}

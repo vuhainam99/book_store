@@ -1,0 +1,663 @@
+<!-- {% load static %} -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link style="border-radius: 50%;" rel="shortcut icon" type="image/png" href="https://image.pngaaa.com/538/21538-middle.png"/>
+
+	<title> Book Recommndation</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<!-- Google font -->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
+
+	<!-- Bootstrap -->
+
+	<link type="text/css" rel="stylesheet" href="../../static/shop/css/bootstrap.min.css" />
+
+	<!-- Slick -->
+
+	<link type="text/css" rel="stylesheet" href="../../static/shop/css/slick.css" />
+	<link type="text/css" rel="stylesheet" href="../../static/shop/css/slick-theme.css" />
+
+	<!-- nouislider -->
+
+	<link type="text/css" rel="stylesheet" href="../../static/shop/css/nouislider.min.css" />
+
+	<!-- Font Awesome Icon -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+	<link rel="stylesheet" href="../../static/shop/css/font-awesome.min.css">
+
+	<!-- Custom stlylesheet -->
+
+	<link type="text/css" rel="stylesheet" href="../../static/shop/css/style.css" />
+	<link type="text/css" rel="stylesheet" href="../../static/shop/css/category-style.css" />
+
+
+
+	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" />
+
+</head>
+
+<body>
+	<!-- HEADER -->
+	<header>
+		<script></script>
+
+		<!-- TOP HEADER -->
+		<div id="top-header">
+			<div class="container">
+				<ul class="header-links pull-left">
+					<li onclick="myFunction()" id="cl"><a href="#"><i class="fa fa-phone"></i>0988888888</a></li>
+					<li><a href="#"><i class="fa fa-envelope-o"></i> dangphong1520@gmail.com</a></li>
+					<li><a href="#"><i class="fa fa-map-marker"></i> 175 Tay Son</a></li>
+				</ul>
+				<ul class="header-links pull-right" id="menu--bar">
+					<li id="trang__chu" class="active"><a href="#">Trang Chủ</a></li>
+
+					<li>
+						<font color="red" ;>Xin chào, <span id="get--username"></span>
+						</font>
+					</li>
+					<li><a id="logout" href="#">Đăng xuất</a></li>
+
+				</ul>
+			</div>
+		</div>
+
+
+
+		<!-- {% block blk %} -->
+		<div id="header">
+			<!-- container -->
+			<div class="container">
+				<!-- row -->
+				<div class="row">
+					<!-- LOGO -->
+					<div class="col-md-3" id="logo--content">
+						<div class="header-logo" id="img--logo">
+							<a id="go--home" href="index-base.html" class="logo">
+								<img style="border-radius: 50%; margin-top: 15%" src="../../static/shop/img/logob.png"
+									alt="error">
+
+							</a>
+
+						</div>
+						<br />
+						<span>
+							<h3 style="color: #FFFFFF">YourReads</h3>
+						</span>
+					</div>
+
+
+					<!-- /LOGO -->
+
+					<!-- SEARCH BAR -->
+					<div class="col-md-6">
+						<div class="header-search">
+							<form id="form__search">
+								<!-- {% csrf_token %} -->
+								<div name="stype" class="input-select"  id="input-select">
+									Book Title
+								</div>
+								<input type="text" id="search--book" class="input" placeholder="Search here"
+									name="searchbox">
+
+									<button id="myBtn"  style="border: none; background-color: rgba(0, 0, 0, 0); margin: 0; padding: 0;">
+										<a name="sbutton" style="width: 100%;
+										height: 100%;
+										display: inline-block;
+										padding: 0px 13px;" href="#" class="search-btn">Tìm kiếm</a>
+									</button>
+							</form>
+						</div>
+					</div>
+					<!-- /SEARCH BAR -->
+
+					<!-- ACCOUNT -->
+					<div class="col-md-3 clearfix">
+						<div class="header-ctn">
+							<!-- Wishlist -->
+							<div>
+								<a href="#" onclick="go()" id="route--cart">
+									<i class="fas fa-shopping-cart"></i>
+									<span>Giỏ hàng</span>
+									<div id="cart--count" class="qty"></div>
+								</a>
+							</div>
+							<!-- /Wishlist -->
+
+
+							<!-- Menu Toogle -->
+
+							<!-- /Menu Toogle -->
+						</div>
+					</div>
+					<!-- /ACCOUNT -->
+				</div>
+				<!-- row -->
+			</div>
+			<!-- container -->
+		</div>
+		<!-- /MAIN HEADER -->
+	</header>
+	<!-- /HEADER -->
+
+	<!-- NAVIGATION -->
+	<nav id="navigation">
+		<!-- container -->
+		<div class="container" id="product--menu">
+			<!-- responsive-nav -->
+			<div id="responsive-nav">
+				<!-- NAV -->
+				<ul class="main-nav nav navbar-nav" id="product--menu">
+					<li class="active"><a id="go--h" href="#">Trang chủ</a></li>
+					<li>
+						<a href="#">Danh mục</a>
+						<ul id="product__category--list">
+							<li><a href="#">s sd dsf s</a></li>
+							<li><a href="#">s</a></li>
+							<li><a href="#">s</a></li>
+							<li><a href="#">s</a></li>
+						</ul>
+					</li>
+				</ul>
+
+				<!-- /NAV -->
+			</div>
+			<!-- /responsive-nav -->
+		</div>
+		<!-- /container -->
+	</nav>
+	<!-- /NAVIGATION -->
+
+	<!-- SECTION -->
+	</div>
+	<!-- /SECTION -->
+
+	<!-- SECTION -->
+
+
+	<!-- SECTION -->
+	<div class="section">
+		<!-- container -->
+		<div class="container">
+			<!-- row -->
+			<div class="row">
+
+				<!-- section title -->
+				<div class="col-md-12">
+					<div class="section-title">
+						<h3 class="title">Trending Books</h3>
+
+					</div>
+				</div>
+				<!-- /section title -->
+
+				<!-- Products tab & slick -->
+				<div class="col-md-12" id="product--list">
+
+
+					<div class="product__item">
+						<div class="product__img">
+							<img src="../../static/shop/img/book-test.png" alt="" />
+						</div>
+						<div class="product__content">
+							<div>Product Name</div>
+							<div>Product Price</div>
+						</div>
+						<div id="product__option">
+							<div class="product__add-cart">
+								<i style="color: white;" class="fas fa-cart-plus"></i>
+								<div class="product__detail">
+
+									<div class="product__detail-top">
+										<div class="product__detail-left">
+											<img src="../../static/shop/img/book-test.png" alt="">
+										</div>
+										<div class="product__detail-right">
+											<div class="product__name">Book Name: Coo be ban diem</div>
+											<div class="product__name">Book Price: Coo be ban diem</div>
+											<div class="product__name">Book Rating: Coo be ban diem</div>
+											<div class="product__name">Book Rating Count: Coo be ban diem</div>
+											<div class="product__name">Book Authour: Coo be ban diem</div>
+											<div class="product__name">Book Name: Coo be ban diem</div>
+											<div class="product__name">Book Description: Coo be ban diem</div>
+										</div>
+									</div>
+
+									<div class="product__detail-buttom">
+										<div class="product__recomment">
+											<div class="product__recomment-img">
+												<img src="../../static/shop/img/book-test.png" alt="">
+											</div>
+											<!-- <div class="product__recomment-name">
+												<span>Product name</span>
+											</div> -->
+										</div>
+										<div class="product__recomment">
+											<div class="product__recomment-img">
+												<img src="../../static/shop/img/book-test.png" alt="">
+											</div>
+											<!-- <div class="product__recomment-name">
+												Product name
+											</div> -->
+										</div>
+										<div class="product__recomment">
+											<div class="product__recomment-img">
+												<img src="../../static/shop/img/book-test.png" alt="">
+											</div>
+											<!-- <div class="product__recomment-name">
+												Product name
+											</div> -->
+										</div>
+										<div class="product__recomment">
+											<div class="product__recomment-img">
+												<img src="../../static/shop/img/book-test.png" alt="">
+											</div>
+											<!-- <div class="product__recomment-name">
+												Product name
+											</div> -->
+										</div>
+										<div class="product__recomment">
+											<div class="product__recomment-img">
+												<img src="../../static/shop/img/book-test.png" alt="">
+											</div>
+											<!-- <div class="product__recomment-name">
+												Product name
+											</div> -->
+										</div>
+										<div class="product__recomment">
+											<div class="product__recomment-img">
+												<img src="../../static/shop/img/book-test.png" alt="">
+											</div>
+											<!-- <div class="product__recomment-name">
+												Product name
+											</div> -->
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="product__rate-ting"><i style="color: yellow;" class="fas fa-star"></i></div>
+							<div class="product__view-count"><i style="color: white;" class="fas fa-eye"></i></div>
+						</div>
+					</div>
+
+
+				</div>
+				<div class="col-md-12" id="pagination">
+					<div class="content__paging">
+						<ul>
+							<li class="font--cdn btn-prev"><i class="fas fa-backward"></i></li>
+							<!-- <div class="number-page" id="number-page">
+								<li class="active"><a href="">1</a></li>
+								<li><a href="">2</a></li>
+								<li><a href="">3</a></li>
+							</div> -->
+							<li class="font--cdn btn-next"><i class="fas fa-forward"></i></li>
+						</ul>
+					</div>
+				</div>
+				<!-- Products tab & slick -->
+			</div>
+			<!-- /row -->
+		</div>
+		<!-- /container -->
+	</div>
+	<!-- /SECTION -->
+	<script>
+		function myfun() {
+			$(document).ready(function () {
+				$("#heart").click(function () {
+					if ($("#heart").hasClass("liked")) {
+						$("#heart").html('<i class="fa fa-heart-o" aria-hidden="true"></i>');
+						$("#heart").removeClass("liked");
+					} else {
+						$("#heart").html('<i class="fa fa-heart" aria-hidden="true"></i>');
+						$("#heart").addClass("liked");
+					}
+				});
+			});
+		}
+	</script>
+
+	<!-- {% endblock %} -->
+	<footer id="footer">
+		<!-- top footer -->
+		<div class="section">
+			<!-- container -->
+			<div class="container">
+				<!-- row -->
+				<div class="row">
+
+					<div class="footer">
+						<h3 class="footer-title">Liên hệ với chúng tôi</h3>
+						<p>Trang web này dành cho Đề xuất sách. Trên cơ sở lịch sử của người dùng, nó đề xuất cuốn sách.
+							Người dùng cũng có thể tìm kiếm và xếp hạng cuốn sách. Chúng tôi thực hiện trang web này như
+							một dự án học kỳ đại học của chúng tôi. Nó sẽ được nâng cấp trong tương lai. </p>
+						<ul class="footer-links">
+							<li><a href="#"><i class="fa fa-map-marker"></i>175 Tay Son</a></li>
+							<li><a href="#"><i class="fa fa-phone"></i>0988888888</a></li>
+							<li><a href="#"><i class="fa fa-envelope-o"></i>dangphong1520@gmail.com</a></li>
+						</ul>
+					</div>
+				</div>
+				<!-- /container -->
+			</div>
+			<!-- /top footer -->
+
+			<!-- bottom footer -->
+			<div id="bottom-footer" class="section">
+				<div class="container">
+					<!-- row -->
+					<div class="row">
+						<div class="col-md-12 bottom__item text-center">
+
+							<span class="copyright">
+								<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+								Copyright &copy;
+								<script>document.write(new Date().getFullYear());</script> All rights reserved |
+
+								<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+							</span>
+						</div>
+					</div>
+					<!-- /row -->
+				</div>
+				<!-- /container -->
+			</div>
+			<!-- /bottom footer -->
+	</footer>
+	<!-- /FOOTER -->
+
+	<!-- jQuery Plugins -->
+	<script src="../../static/shop/js/login-base.js"></script>
+	<script src="../../static/shop/js/jquery.min.js"></script>
+	<script src="../../static/shop/js/bootstrap.min.js"></script>
+	<script src="../../static/shop/js/slick.min.js"></script>
+	<script src="../../static/shop/js/nouislider.min.js"></script>
+	<script src="../../static/shop/js/jquery.zoom.min.js"></script>
+	<script src="../../static/shop/js/main.js"></script>
+	<script src="../../static/shop/js/cf.js"></script>
+	<script>
+		// var lc ="http://192.168.1.83:8000";
+		var lc ="..";
+		// get category
+
+		function getCategory() {
+			return new Promise((resolve, reject) => {
+				fetch(`${lc}/api/v1/list_geres/`)
+					.then(response => {
+						return response.json();
+					})
+					.then(data => {
+
+						resolve(data);
+					})
+					.catch(err => {
+						reject(err);
+					});
+			});
+		}
+		getCategory().then(cate => {
+
+			const queryString = window.location.search;
+			console.log(queryString);
+			const urlParams = new URLSearchParams(queryString);
+			const username = urlParams.get('username');
+			const userid = urlParams.get('userid');
+			document.getElementById("get--username").innerHTML = username;
+
+			var categories = cate.data
+			console.log(categories);
+
+			var htmls = categories.map(function (category, index) {
+
+				return `
+					<li><a style="color:white" href="./category?category_name=${category}">${category}</a></li>
+					`
+			});
+
+			var html = htmls.join('');
+			document.getElementById('product__category--list').innerHTML = html;
+
+		}).catch(err => {
+			console.log(err);
+		});
+
+		// search book
+		const queryString = window.location.search;
+		console.log(queryString);
+		const urlParams = new URLSearchParams(queryString);
+		const username = urlParams.get('username');
+		const userid = urlParams.get('userid');
+		const categoryName = urlParams.get('category_name')
+
+		// get cart
+		function getCart() {
+			return new Promise((resolve, reject) => {
+				fetch(`${lc}/api/v1/order/?id_user=${userid}`)
+					.then(response => {
+						return response.json();
+					})
+					.then(data => {
+
+						resolve(data);
+					})
+					.catch(err => {
+						reject(err);
+					});
+			});
+		}
+		getCart().then(cate => {
+
+			const queryString = window.location.search;
+			console.log(queryString);
+			const urlParams = new URLSearchParams(queryString);
+			const username = urlParams.get('username');
+			const userid = urlParams.get('userid');
+			console.log(username);
+			document.getElementById("get--username").innerHTML = username;
+
+			var categories = cate.data
+			console.log('cc');
+			console.log(categories);
+
+			document.getElementById('cart--count').innerHTML = categories.length;
+
+		}).catch(err => {
+			console.log(err);
+		});
+		// go home
+		document.getElementById('go--home').addEventListener('click', function (e) {
+			e.preventDefault();
+			window.location.href = `./index-base.html?userid=${userid}&username=${username}`;
+		})
+		document.getElementById('trang__chu').addEventListener('click', function (e) {
+			e.preventDefault();
+			window.location.href = `./index-base.html?userid=${userid}&username=${username}`;
+		})
+		document.getElementById('go--h').addEventListener('click', function (e) {
+			e.preventDefault();
+			window.location.href = `./index-base.html?userid=${userid}&username=${username}`;
+		})
+
+		document.getElementById("myBtn").addEventListener("click", function (e) {
+			e.preventDefault();
+			var a = document.getElementById("search--book").value;
+			window.location.href = `./search-base.html?search=${a}&userid=${userid}&username=${username}`;
+		});
+		// go cart 
+		function go() {
+			window.location.href = `./cart-base.html?userid=${userid}&username=${username}`;
+		}
+
+
+
+		//log out
+		var logout = document.getElementById('logout');
+		logout.addEventListener('click', function () {
+			console.log('a');
+			if (confirm('Bạn có chắc chắn muốn thoát ?')) {
+
+				window.localStorage.clear();
+				window.location.reload(true);
+				window.location.replace('./login-base.html');
+			}
+		})
+
+		function getCurrentPage(currentPage) {
+			start = (currentPage - 1) * perPage;
+			end = currentPage * perPage;
+		}
+
+		var perPage = 8;
+		var currentPage = 1;
+		var start = 0;
+		var end = perPage;
+		// Math.ceil()
+		const totalPages = 10;
+		var obj = {};
+		var a = 10;
+		var datas;
+
+		const btnNext = document.querySelector('.btn-next');
+		const btnPrev = document.querySelector('.btn-prev');
+
+		// get category data
+
+		function paginate() {
+			function getData() {
+				return new Promise((resolve, reject) => {
+					fetch(`${lc}/api/v1/details/?genres=${categoryName}`)
+						.then(response => {
+							return response.json();
+						})
+						.then(data => {
+
+							resolve(data);
+						})
+						.catch(err => {
+							reject(err);
+						});
+				});
+			}
+			getData().then(data => {
+				function kFormatter(num) {
+					return Math.abs(num) > 999 ? Math.sign(num) * ((Math.abs(num) / 100000).toFixed(0)) + 'k' : Math.sign(num) * Math.abs(num)
+				}
+				console.log('cate')
+
+				console.log(data)
+
+				const queryString = window.location.search;
+				console.log(queryString);
+				const urlParams = new URLSearchParams(queryString);
+				const username = urlParams.get('username');
+				const userid = urlParams.get('userid');
+				console.log(username);
+				document.getElementById("get--username").innerHTML = username;
+
+				console.log('a');
+				var categories = data.data;
+				console.log(datas);
+
+				var htmls = categories.map(function (category, index) {
+					if (index >= start && index < end) {
+
+						return `
+						<div class="product__item">
+						<div class="product__img">
+							<a href="./detail-base.html?id_book=${category.id}&username=${username}&userid=${userid}"><img src="${category.image_url}" alt="${category.book_title}" /></a>
+						</div>
+						<div class="product__content">
+						<div>${category.book_title}</div>
+						<div>Giá: ${category.book_price} Vnd <a href="./cart-now.html?id_book=${category.id}&username=${username}&userid=${userid}">Mua ngay</a></div>
+						</div>
+						<div id="product__option">
+						<div id="add__detail" class="product__add-cart"><a href="./cart-base.html?id_book=${category.id}&username=${username}&userid=${userid}"><i style="color: white;" class="fas fa-cart-plus"></i></a></div>
+						<div class="product__rate-ting"><a href="#" style="color:white;">${category.book_rating.toFixed(1)}<i style="color: yellow;" class="fas fa-star"></i></a></div>
+						<div class="product__view-count"><a href="#" style="color:white;">${kFormatter(category.book_rating_count)}<i style="color: white;" class="fas fa-eye"></i></a></div>
+						</div>
+						</div>
+					`
+					}
+				});
+
+				var html = htmls.join('');
+				document.getElementById('product--list').innerHTML = html;
+
+			}).catch(err => {
+				console.log(err);
+			});
+		}
+		//
+		paginate();
+
+
+		btnNext.addEventListener('click', () => {
+			currentPage++;
+			if (currentPage > totalPages) {
+				currentPage = totalPages;
+			}
+			getCurrentPage(currentPage);
+			paginate();
+		})
+
+		btnPrev.addEventListener('click', () => {
+			currentPage--;
+			if (currentPage <= 1) {
+				currentPage = 1;
+			}
+			getCurrentPage(currentPage);
+			paginate();
+		})
+
+		// show list page
+		function renderListPage() {
+			let html = '';
+			html += `<li class="active"><a>${1}</a></li>`;
+			for (let i = 2; i <= totalPages; i++) {
+				html += `<li><a>${i}</a></li>`
+			}
+			document.getElementById('number-page').innerHTML = html;
+		}
+
+		// event click chang page
+		renderListPage();
+		function changPage() {
+			const currentPages = document.querySelectorAll('.number-page > li');
+			for (let i = 0; i <= currentPages.length; i++) {
+				currentPages[i].addEventListener('click', () => {
+					console.log(currentPages);
+					let value = i + 1;
+					currentPage = value;
+					getCurrentPage(currentPage);
+					paginate();
+				})
+			}
+		}
+		changPage();
+
+
+		//log out
+		var logout = document.getElementById('logout');
+		logout.addEventListener('click', function () {
+			console.log('a');
+			if (confirm('Bạn có chắc chắn muốn thoát ?')) {
+
+				window.localStorage.clear();
+				window.location.reload(true);
+				window.location.replace('./login-base.html');
+			}
+		})
+
+	</script>
+</body>
+
+</html>
