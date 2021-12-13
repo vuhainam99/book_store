@@ -1,23 +1,21 @@
-FROM python:3.8.3-alpine
+FROM python:3.7.7
 
-# set environment variables
-ENV PYTHONDONTWRITEBYTECODE 1
+RUN pip install pymysql
 ENV PYTHONUNBUFFERED 1
-ENV GRPC_PYTHON_BUILD_SYSTEM_OPENSSL 1
-ENV GRPC_PYTHON_BUILD_SYSTEM_ZLIB 1
+RUN mkdir /code
+WORKDIR /code
+ADD requirements.txt /code/
+ADD manage.py /code/
+RUN pip install --upgrade pip
+RUN pip install -r requirements.txt
+# RUN python manage.py makemigrations
+# RUN python manage.py migrate
 
-RUN mkdir /usr/src/app/
-WORKDIR /usr/src/app/
+RUN apt-get update && apt-get install nodejs npm -y
+RUN npm config set registry http://registry.npmjs.org/
+RUN npm -g install yuglify
+#RUN ln -s /usr/bin/nodejs /usr/bin/node
 
-COPY . ./
-
-RUN apk update \
-    && apk add --no-cache gcc g++ \
-    && apk add postgresql-dev gcc python3-dev musl-dev libffi-dev cargo jpeg-dev zlib-dev libpq
-
-
-RUN pip install --upgrade pip setuptools
-RUN pip install --no-cache-dir -r requirements.txt
-
-
-ENV PATH="/py/bin:$PATH"
+# TODO : install following module if you want support live reload js while development
+# https://pypi.org/project/django-livereload/
+#RUN pip install django-livereload 
