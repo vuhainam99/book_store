@@ -17,3 +17,8 @@ def cart_now(request,id_book=None):
     book = Book.objects.get(id=id_book)
     context = {'book': book}
     return render(request, 'shop/cart-now.html', context)
+
+def cart_base(request,id_book=None):
+    # book = Book.objects.get(id=id_book)
+    context = {'book': ''}
+    return render(request, 'shop/cart-base.html', context)
